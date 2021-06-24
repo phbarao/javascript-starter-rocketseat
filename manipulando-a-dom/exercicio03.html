@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 03</title>
+  </head>
+  <body>
+    <ul></ul>
+
+    <script>
+      var names = ["Diego", "Gabriel", "Lucas", "Pedro"];
+      var list = document.querySelector("ul");
+
+      for (var name of names) {
+        var newLi = document.createElement("li");
+        var newName = document.createTextNode(name);
+        list.appendChild(newLi);
+        newLi.appendChild(newName);
+      }
+    </script>
+  </body>
+</html>

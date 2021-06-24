@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 03</title>
+  </head>
+  <body>
+    <ul></ul>
+    <input type="text" name="name" />
+    <button onClick="adicionar()">Adicionar</button>
+
+    <script>
+      var names = ["Diego", "Gabriel", "Lucas"];
+      var list = document.querySelector("ul");
+      var input = document.querySelector("input");
+
+      function addItem(texto) {
+        var liElment = document.createElement("li");
+        var textElement = document.createTextNode(texto);
+
+        liElment.appendChild(textElement);
+        list.appendChild(liElment);
+      }
+
+      function adicionar() {
+        addItem(input.value);
+        input.value = ""; // limpa o campo imput
+      }
+
+      for (name of names) {
+        addItem(name);
+      }
+    </script>
+  </body>
+</html>

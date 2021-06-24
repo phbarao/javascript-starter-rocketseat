@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <button class="botao">RED BOX</button>
+    </div>
+
+    <script>
+      var btn = document.querySelector(".botao");
+
+      btn.onclick = function () {
+        var container = document.querySelector("#app");
+        var newBox = document.createElement("div");
+
+        newBox.style.width = "100px";
+        newBox.style.height = "100px";
+        newBox.style.backgroundColor = "#f00";
+        newBox.style.margin = "1px";
+
+        container.appendChild(newBox);
+      };
+    </script>
+  </body>
+</html>
